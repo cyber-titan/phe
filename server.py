@@ -27,16 +27,16 @@ def store_encrypted_result(data):
 
 data = {}
 # 1. get encrypted user data from data.json
-with open('/Users/cyber_titan/Desktop/VS Code/PHE Demo/data.json', 'r') as file: 
+with open('C:/Users/hp/OneDrive/Desktop/PHE Demo/phe/data.json', 'r') as file: 
 	data = json.load(file)
 
 # 2. store encrypted result in result.json after performing prediction on encrypted data. (data is of type 'dict')
 result = store_encrypted_result(data)
 # result is of type 'dict'
-with open('/Users/cyber_titan/Desktop/VS Code/PHE Demo/result.json', 'w') as file: 
+with open('C:/Users/hp/OneDrive/Desktop/PHE Demo/phe/result.json', 'w') as file: 
 	data = json.dump(result, file, indent = 2)
 
 # Verification: If client data wasn't encrypted, will we get the same output? Uncomment below & run to verify.
-data = [24, 4, 6, 1]
-model_coefficients = model.model_output()
-print("Prediction value:", sum([data[i] * model_coefficients[i] for i in range(len(data))]))
+# data = [24, 4, 6, 1]
+# model_coefficients = model.model_output()
+# print("Prediction value:", sum([data[i] * model_coefficients[i] for i in range(len(data))]))

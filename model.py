@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-# from sklearn.metrics import mean_squared_error, r2_score
+
 
 def model_output():
     # read input from file
-    input_data = pd.read_csv('/Users/cyber_titan/Desktop/VS Code/PHE Demo/employee_data.csv')
+    input_data = pd.read_csv('C:/Users/hp/OneDrive/Desktop/PHE Demo/phe/employee_data.csv')
     # dependent variable 'salary' along Y-axis
     y = input_data.salary
     # dropping salary column and using independent variables 'age, healthy_eating, active_lifestyle, Gender' along X-axis
@@ -18,4 +18,4 @@ def model_output():
     return reg.coef_
 
 
-# print(model_output())
+print(model_output())
